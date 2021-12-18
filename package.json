@@ -1,0 +1,26 @@
+{
+  "name": "directory-cls",
+  "version": "1.0.0",
+  "description": "Code challenge with directory management commands",
+  "main": "bin/index.js",
+  "scripts": {
+    "build": "rimraf bin/ && babel ./src --out-dir bin/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrieltello/directory-cls.git"
+  },
+  "author": "Gabriel Tello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrieltello/directory-cls/issues"
+  },
+  "homepage": "https://github.com/gabrieltello/directory-cls#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "rimraf": "^3.0.2"
+  }
+}
