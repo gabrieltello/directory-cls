@@ -90,9 +90,9 @@ export class NodeTree {
    * @returns {string} Tree string
    */
   stringify() {
-    let result = [];
-    let current = this.root;
-    let buffer = 0;
+    var result = [];
+    var current = this.root;
+    var buffer = 0;
 
     this.preOrderSearch(
       current,

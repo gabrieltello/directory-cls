@@ -20,8 +20,8 @@ export class DirectoryManager {
       throw new Error("Invalid arguments.");
     }
 
-    let path = newDirectory.split("/");
-    let currentDirectory = this.directoryTree.root;
+    const path = newDirectory.split("/");
+    var currentDirectory = this.directoryTree.root;
 
     path.forEach((directory) => {
       currentDirectory =
@@ -49,9 +49,9 @@ export class DirectoryManager {
       throw new Error("Invalid arguments.");
     }
 
-    let path = directoryPath.split("/");
-    let currentDirectory = this.directoryTree.root;
-    let parent;
+    const path = directoryPath.split("/");
+    var currentDirectory = this.directoryTree.root;
+    var parent;
 
     for (let i = 0; i < path.length; i++) {
       parent = currentDirectory;
@@ -85,16 +85,17 @@ export class DirectoryManager {
       throw new Error("Invalid arguments.");
     }
 
-    let origin = originPath.split("/");
-    let destination = destinationPath.split("/");
-    let child = this.getDirectory(origin);
-    let newParent = this.getDirectory(destination);
+    const origin = originPath.split("/");
+    const destination = destinationPath.split("/");
+    const child = this.getDirectory(origin);
+    const newParent = this.getDirectory(destination);
+    var parent;
 
     if (!child) throw new Error(`Cannot move '${originPath}' does not exist`);
     if (!newParent)
       throw new Error(`Cannot move '${destinationPath}' does not exist`);
 
-    let parent = this.getDirectory(origin.slice(0, origin.length - 1));
+    parent = this.getDirectory(origin.slice(0, origin.length - 1));
     this.directoryTree.removeChild(child, parent);
     this.directoryTree.addChild(child, newParent);
   }
@@ -106,7 +107,7 @@ export class DirectoryManager {
    * @returns {Node} Directory
    */
   getDirectory(path) {
-    let currentDirectory = this.directoryTree.root;
+    var currentDirectory = this.directoryTree.root;
 
     path.every((directory) => {
       currentDirectory = this.directoryTree.getChild(

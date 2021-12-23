@@ -26,8 +26,8 @@ export class App {
    * @returns {string} ExecutionStatus
    */
   execute(input) {
-    let args = input.split(" ");
-    let command = args[0].toLowerCase();
+    const args = input.split(" ");
+    const command = args[0].toLowerCase();
 
     if (command.toLowerCase() == "exit") {
       this.reader.close();
