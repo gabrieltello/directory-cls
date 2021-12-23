@@ -1,0 +1,19 @@
+{
+    "env": {
+      "browser": true,
+      "es6": true,
+      "jest": true
+    },
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "requireConfigFile": false
+    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "rules": {
+      "max-len": ["warn", { "code": 80, "tabWidth": 4  }],
+      "no-unused-vars": "error",
+      "no-unused-private-class-members": "error"
+    }
+}
